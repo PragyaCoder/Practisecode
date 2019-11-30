@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+<!--{% load staticfiles %}-->
+
+{% block body_block %}
+            
+                <h1>This is a picture of Django himself!</h1>
+                <img src = "{% static 'images/Django Reinhardt.jpg' %}" alt="Uh Oh! Didn't show!!">
+                {{insert_me|cut:'Hello'}}
+                <p> Text here</p>
+    {% endblock %}
+    

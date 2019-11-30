@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+<!--{% load staticfiles %}-->
+
+{% block body_block %}
+
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+
+{% endblock %}

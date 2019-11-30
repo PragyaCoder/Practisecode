@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends "first_app/base.html" %}
+<!--{% load staticfiles %}-->
+{% block body_block %}
+            <h1>Please sign-up here!!</h1>
+            <form method="POST">
+                {{formModel.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+            <a href = {% url 'first_app:forms' %} target="__blank">Navigate to actual forms Page</a><br>
+            <a href = {% url 'admin:index' %}>Testing Admin</a>
+            <a href = {% url 'first_app:index' %}>Link to Index Page</a>
+{% endblock %}       
